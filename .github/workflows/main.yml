@@ -18,14 +18,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: npm ci
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
       - name: Install vite latest
         run: npm install vite@latest
-
-      - name: Install dependencies
-        run: npm install
 
       - name: Run tests
         run: npm test --if-present
